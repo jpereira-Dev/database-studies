@@ -1,6 +1,6 @@
 # 📚 Banco de Dados
 
-Este repositório foi criado para armazenar todos os materiais, exercícios, roteiros de práticas e projetos desenvolvidos durante a disciplina de **Banco de Dados** do curso de `<Nome do Seu Curso>` na `<Nome da Sua Instituição/Universidade>`.
+Este repositório foi criado para armazenar todos os materiais, exercícios, roteiros de práticas e projetos desenvolvidos durante a disciplina de **Banco de Dados** do curso de `<Ciência da Computação>` na `<Universidade federal de Campina Grande >`.
 
 ## 🎯 Objetivo
 
