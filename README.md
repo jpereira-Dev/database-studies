@@ -28,4 +28,4 @@ Se você quiser clonar este repositório para dar uma olhada nos scripts ou test
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/](https://github.com/)<seu-usuario>/<nome-do-repositorio>.git
+   git clone https://github.com/jpereira-Dev/database-studies.git
