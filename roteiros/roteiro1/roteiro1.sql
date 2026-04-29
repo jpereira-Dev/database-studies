@@ -41,3 +41,14 @@ CREATE TABLE SEGURO(
     FOREIGN KEY (segurado) REFERENCES SEGURADO(cpf),
     FOREIGN KEY (automovel) REFERENCES AUTOMOVEL(chassi)
 );
+
+CREATE TABLE SINISTRO (
+
+    id_sinistro INT PRIMARY KEY,
+    carro  CHAR(17),
+    dono CHAR(11),
+
+
+    FOREIGN KEY carro REFERENCES AUTOMOVEL(chassi)
+    FOREIGN KEY dono REFERENCES SEGURADO(cpf)
+);
