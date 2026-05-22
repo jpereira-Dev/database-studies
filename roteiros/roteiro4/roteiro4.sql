@@ -38,4 +38,17 @@ SELECT T.Dname FROM department AS T, dept_locations AS E WHERE T.Dnumber = E.Dnu
 SELECT T.Fname,T.Lname,E.Dependent_name FROM employee AS T, dependent AS E WHERE E.Essn = T.ssn;
 
 --questão 14
-SELECT T.Fname ||' ' ||  T.Lname, T.salary FROM employee AS T WHERE T.salary > 50000;
+SELECT T.Fname ||' '||  T.Lname AS Full_name, T.salary FROM employee AS T WHERE T.salary > 50000;
+
+--questão 15
+SELECT P.Pname AS project_name, D.Dname AS department_name FROM project AS P, department AS D WHERE P.Dnum = D.Dnumber;
+
+--questão 16
+SELECT P.Pname AS project_name, E.Fname AS gerent_name FROM project P, department D, employee E WHERE P.pnumber > 30 and P.dnum = D.dnumber and D.mgrssn = E.ssn;
+
+--questão 17
+SELECT P.Pname AS project_name, E.Fname AS employee_name FROM project P, works_on w, employee E Where P.pnumber = w.pno and w.Essn = E.ssn;
+
+--questão 18
+
+SELECT E.Fname AS employee_name, D.dependent_name, D.relationship FROM employee E, dependent D, works_on w WHERE E.ssn = D.essn and w.essn = e.ssn and w.pno = 91;
