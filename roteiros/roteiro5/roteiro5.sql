@@ -37,4 +37,8 @@ GROUP BY Pnumber) AS qtd_funcionarios;
 SELECT proj.Pnumber AS number_project, COUNT(*) AS qtd
 FROM project AS proj, works_on AS trab, employee AS func 
 WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn 
-GROUP BY Pnumber;
+GROUP BY Pnumber
+HAVING COUNT(*) = (SELECT MIN(qtd) FROM (SELECT COUNT(*) AS qtd
+FROM project AS proj, works_on AS trab, employee AS func 
+WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn 
+GROUP BY Pnumber) AS qtd_funcionarios); -- DEPOIS DESSA QUESTÃO, PENSO QUE ERA MELHOR TER FEITO MÚSICA
