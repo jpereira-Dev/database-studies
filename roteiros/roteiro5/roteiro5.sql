@@ -34,12 +34,19 @@ WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn
 GROUP BY Pnumber) AS qtd_funcionarios;
 
 
+
 --questão 7
-SELECT proj.Pnumber AS number_project, COUNT(*) AS qtd
-FROM project AS proj, works_on AS trab, employee AS func
-WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn
-GROUP BY Pnumber
-HAVING COUNT(*) = (SELECT MIN(qtd) FROM (SELECT COUNT(*) AS qtd
-FROM project AS proj, works_on AS trab, employee AS func
-WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn
-GROUP BY Pnumber) AS qtd_funcionarios); -- DEPOIS DESSA QUESTÃO, PENSO QUE ERA MELHOR TER FEITO MÚSICA
+
+
+-- questão 8
+SELECT proj.Pnumber AS number_project, AVG(salary) AS Average_salary
+FROM works_on AS trab, employee AS func, project AS proj
+WHERE proj.Pnumber = trab.pno and trab.Essn = func.ssn
+GROUP BY proj.Pnumber;
+
+-- questão 9
+SELECT proj.Pnumber AS number_project, proj.Pname AS project_name, AVG(salary) AS Average_salary
+FROM works_on AS trab, employee AS func, project AS proj
+WHERE proj.Pnumber = trab.pno and trab.Essn = func.ssn
+GROUP BY proj.Pnumber;
+
