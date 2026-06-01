@@ -28,14 +28,13 @@ ORDER BY qtd_supervisionados;
  GROUP BY sup.ssn;
 
 --questão 6
-SELECT MIN(qtd) FROM (SELECT COUNT(*) AS qtd
-FROM project AS proj, works_on AS trab, employee AS func
-WHERE proj.Pnumber = trab.pno AND trab.Essn = func.ssn
-GROUP BY Pnumber) AS qtd_funcionarios;
+SELECT MIN(qtd_func) FROM (SELECT COUNT(*) AS qtd_func FROM works_on
+GROUP BY pno) AS qtd_funcionarios;
 
 
 
 --questão 7
+t
 
 
 -- questão 8
@@ -50,3 +49,5 @@ FROM works_on AS trab, employee AS func, project AS proj
 WHERE proj.Pnumber = trab.pno and trab.Essn = func.ssn
 GROUP BY proj.Pnumber;
 
+-- questão 10
+SELECT func.Fname, func.salary FROM employee
