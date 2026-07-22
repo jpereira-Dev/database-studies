@@ -20,7 +20,7 @@ O repositório está organizado da seguinte forma:
 Durante a disciplina, as seguintes ferramentas e tecnologias estão sendo utilizadas:
 
 * **Linguagem:** SQL
-* **SGBDs (Sistemas de Gerenciamento de Banco de Dados):** `<Ex: PostgreSQL, MySQL, Oracle, etc.>`
+* **SGBDs (Sistemas de Gerenciamento de Banco de Dados):** PostgreSQL
 
 ## 🚀 Como utilizar
 
